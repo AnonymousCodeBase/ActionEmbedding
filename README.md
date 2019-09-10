@@ -27,13 +27,13 @@ There needs some modifications for tasks without state embedding
 
 ```
 python agent.py
-			-i identifier
-			-t task_id
+        -i identifier
+	-t task_id
 			
-			-transfer 0/1
-			-ckpt_path path
-			-ckpt_step step
-			-source_t source_task_id
+	-transfer 0/1
+	-ckpt_path path
+	-ckpt_step step
+	-source_t source_task_id
 ```
 
 
