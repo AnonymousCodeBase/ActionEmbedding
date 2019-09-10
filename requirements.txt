@@ -1,0 +1,6 @@
+tensorflow==1.14.0
+tensorflow_probability
+gym
+numpy
+scikit-learn
+argparse
