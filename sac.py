@@ -78,8 +78,8 @@ class SoftAC(object):
 
             temp = 1 - tf.square(pi)
             clip_up = tf.cast(temp > 1, tf.float32)
-            clip_down = tf.cast(temp < -1, tf.float32)
-            logp_pi -= tf.reduce_sum(tf.log(temp + tf.stop_gradient(clip_up * (1 - temp) + clip_down * (-1 - temp))+ 1e-6), axis=1)
+            clip_down = tf.cast(temp < 0, tf.float32)
+            logp_pi -= tf.reduce_sum(tf.log(temp + tf.stop_gradient(clip_up * (1 - temp) + clip_down * (0 - temp))+ 1e-6), axis=1)
 
             self.mu = mu
             self.action = pi
